@@ -1,0 +1,56 @@
+.button {
+  --buttonIconBeforeWidth: 6px;
+  --buttonIconBeforeHeight: 6px;
+  --buttonIconAfterWidth: 6px;
+  --buttonIconAfterHeight: 6px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--btnVerPd) var(--btnHorPd);
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid;
+  border-radius: var(--btnBorderRadius);
+  cursor: var(--btnCursor);
+  transition: var(--btnTransition);
+  background: var(--btnBgColor);
+  text-shadow: var(--btnTextShadow);
+  color: var(--btnColor);
+  font-weight: var(--btnFontWieght);
+}
+
+/* Закрашенная кнопка */
+.filled {
+  --btnBgColor: var(--colorMaize);
+  --btnColor: var(--colorBlack);
+}
+
+/* Прозрачная кнопка */
+.outline {
+  background-color: transparent;
+  color: var(--btnColor);
+  border-color: var(--btnColor);
+}
+
+/* Hover стили */
+.button:hover {
+  background-color: var(--btnHoverBackgroundColor);
+  color: var(--btnHoverTextColor);
+  border-color: var(--btnHoverBorderColor);
+}
+
+.iconBefore {
+  display: inline-block;
+  color: var(--btnIconColor);
+  width: var(--buttonIconBeforeWidth);
+  height: var(--buttonIconBeforeHeight);
+}
+
+.iconAfter {
+  display: inline-block;
+  color: var(--btnIconColor);
+  width: var(--buttonIconAfterWidth);
+  height: var(--buttonIconAfterHeight);
+}

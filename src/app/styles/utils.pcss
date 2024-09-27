@@ -1,0 +1,50 @@
+@import "./mixins.pcss";
+
+.isSpoilerParagraph {
+  font-family: Montserrat, sans-serif;
+
+  @mixin fluidText 18, 14;
+
+  font-weight: 400;
+  line-height: 21.94px;
+  margin-bottom: 25px;
+}
+
+.isPdLeft30 {
+  padding-left: 30px;
+}
+
+.isFlex {
+  display: flex;
+}
+
+.isJustifyCenter {
+  justify-content: center;
+}
+
+.isRelative {
+  position: relative;
+}
+
+.isOrangeBgNftCard {
+  --nftCardBg: linear-gradient(
+    116deg,
+    #eebf73 0%,
+    rgb(255 183 43 / 52%) 44.5%,
+    #191919 100%
+  );
+}
+
+.isGreenBgNftCard {
+  --nftCardBg: linear-gradient(
+    116deg,
+    #3dd0f1 0%,
+    rgb(61 208 241 / 52%) 44.5%,
+    rgb(1 224 217 / 11%) 100%
+  );
+}
+
+.isNoRtl {
+  direction: ltr;
+  text-align: left;
+}

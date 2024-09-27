@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleDetection": "force",
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false,
+    "outDir": "./build/",
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@assets": ["./assets/*"],
+      "@shared/*": ["./shared/*"],
+      "@shared": ["./shared"],
+      "@config": ["./shared/config"],
+      "@config/*": ["./shared/config/*"],
+      "@pages": ["./pages"],
+      "@pages/*": ["./pages/*"],
+      "@widgets": ["./widgets"],
+      "@widgets/*": ["./widgets/*"],
+      "@images/*": ["./assets/images/*"],
+      "@entities": ["./entities"],
+      "@entities/*": ["./entities/*"],
+      "@features": ["./features"],
+      "@features/*": ["./features/*"]
+    }
+  },
+  "include": ["./src", "./declare.d.ts"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}

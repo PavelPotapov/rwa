@@ -1,0 +1,122 @@
+@import "../../app/styles/custom-media.pcss";
+@import "../../app/styles/mixins.pcss";
+
+.nftCard {
+  --nftCardHorPd: 46px;
+  --nftCardVerPd: 56px;
+  --nftCardBorderRadius: 31px;
+
+  display: flex;
+  gap: 42px;
+  padding: var(--nftCardVerPd) var(--nftCardHorPd);
+  border-radius: var(--nftCardBorderRadius);
+  background: var(--nftCardBg);
+  width: auto !important;
+
+  @media (--tabletSmall) {
+    --nftCardHorPd: 25px;
+    --nftCardVerPd: 22px;
+
+    flex-direction: column;
+  }
+}
+
+html[dir="rtl"] .nftCard {
+  flex-direction: row-reverse;
+
+  @media (--tabletSmall) {
+    --nftCardHorPd: 25px;
+    --nftCardVerPd: 22px;
+
+    flex-direction: column;
+  }
+}
+
+.nftCardImgContainer {
+  max-width: 607px;
+  width: 100%;
+  aspect-ratio: 1.63 / 1;
+  border-radius: 25px;
+  overflow: hidden;
+
+  @media (--tabletSmall) {
+    max-width: 100%;
+  }
+}
+
+.nftCardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rightSide {
+  flex-grow: 1;
+}
+
+.spec {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+
+  @media (--tabletSmall) {
+    font-size: 14px;
+  }
+}
+
+.infoContainer dl {
+  margin-block: 24px;
+}
+
+.spec dd {
+  margin: 0;
+  font-weight: 900;
+}
+
+.spec dt {
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--colorWhite);
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.title {
+  text-shadow: var(--nftCardTextShadowTitle);
+  font-weight: 900;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--colorWhite);
+  margin: 0;
+  padding-left: 14px;
+
+  @mixin lineClamp 2;
+
+  @media (--tabletSmall) {
+    font-size: 22px;
+    margin-block: -25px;
+  }
+}
+
+.character {
+  max-height: 108px;
+  overflow-y: auto;
+  padding-left: 14px;
+
+  @media (--mobile) {
+    max-height: 84px;
+  }
+}
+
+html[dir="rtl"] .title {
+  text-align: left;
+}
+
+html[dir="rtl"] .spec {
+  justify-content: flex-end;
+}

@@ -1,0 +1,71 @@
+@import "../../../app/styles/custom-media.pcss";
+@import "../../../app/styles/mixins.pcss";
+
+.spoiler {
+  --spoilerPd: 32px 55px 25px 44px;
+
+  overflow: hidden;
+
+  p {
+    @mixin fluidText 18, 13;
+  }
+}
+
+.spoilerTitle {
+  background-color: transparent;
+  padding: var(--spoilerPd);
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (--mobile) {
+    --spoilerPd: 24px 6px;
+  }
+}
+
+[dir="rtl"] .spoilerTitle {
+  flex-direction: row-reverse;
+}
+
+.spoilerTitleLabel {
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  color: var(--colorWhite);
+
+  @mixin fluidText 23, 17;
+}
+
+[dir="rtl"] .spoilerTitleLabel {
+  letter-spacing: 0;
+}
+
+.spoilerToggle {
+  flex-basis: 24px;
+  width: 24px;
+  height: 25px;
+  cursor: pointer;
+
+  @mixin resetBtn;
+
+  @media (--mobile) {
+    min-width: 18px;
+    height: 19px;
+  }
+}
+
+.spoilerContent {
+  max-height: var(--spoilerContentMaxHeight);
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  padding-inline: 44px 55px;
+
+  @media (--mobile) {
+    padding-inline: 6px;
+  }
+}
+
+.spoilerContentOpen {
+  --spoilerContentMaxHeight: 0;
+}

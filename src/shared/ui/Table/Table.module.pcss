@@ -1,0 +1,155 @@
+@import "../../../app/styles/custom-media.pcss";
+
+.tableWrapper {
+  border-radius: 21px;
+  overflow: hidden;
+}
+
+.table {
+  --tableTheadHeight: 82px;
+
+  direction: ltr;
+  width: 100%;
+  background: linear-gradient(180deg, #000 0%, rgb(97 35 227 / 50%) 100%);
+  padding-bottom: 13px;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  @media (--tabletSmall) {
+    min-width: 52px;
+  }
+
+  @media (--tabletMinimum) {
+    font-size: 22px;
+  }
+}
+
+.table thead th {
+  height: var(--tableTheadHeight);
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--colorWhite);
+
+  @media (--tabletMinimum) {
+    font-size: 8px;
+  }
+}
+
+.table thead tr th:first-child {
+  color: var(--colorOrange);
+}
+
+.table tr td {
+  color: var(--colorPrimaty);
+  font-size: 14px;
+  text-transform: uppercase;
+
+  @media (--tabletSmall) {
+    font-size: 10px;
+  }
+
+  @media (--tabletMinimum) {
+    font-size: 8px;
+  }
+}
+
+.table tr td:first-child {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+
+  @media (--tabletMinimum) {
+    gap: 6px;
+  }
+
+  &::before {
+    content: "";
+    min-width: 24px;
+    height: 17px;
+    display: inline-block;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAASCAYAAABFGc6jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIgSURBVHgBtVXdcdNAEN7v7PBGIleAaADbbwyDM04H6QBTAaECTAWICjAVYCqIwcDwpqMC1IFkXhPdsnuyLEEk2R6Gb0YjnW5v/77dPdABeByn4QnRSD4DNubB9ncG5zZMlPSJ7Go8yLp0oG3jaZxOgd4rIvYGaA9Ekc2B6Ovw9H3L/l1M4vSSYD7oNxNbACv13BAyBpLdYebQEYfEPAVh6xAW69Hp872GppImB3PNujBmtn50/xMdAH+OzJxBz4jdy/V4ELUa8lwU6Zo5YNaWhg5jgTgZi5NBzu7inmSh5M6UQpKu2QnMTzUiy+RYIwpV6kAaSdATg7k85V6/EjN1woOJ/fVO3mH5A8pFA5gqzrwcc8DVKqnOF9FcCflv6P8gWY/OHnpD53YjeeUEMEv2FURTrkVzLETXioCl8sJMEQtf/WJDm9HYzwUvnpvzeLPwFXQcsht24+/jQaKLJ3E6Eq60eofQShHS0lJQosn+JZoSoicp9YjDc43ojyLg7ikgpcq1UYOwTbDurKQv7FM3ZBJQ5Jz7WO+JOnx6JPUM8wLFPGxEtyHQ4svw7HWXyLfxwMrLCgWr3PfhXRh4SqS87YY7rC3Jp4z2+MStlSpZueoXQhVxDWKXdAC4ywkY6w3J2FiAad4go+RrT6gjmflrCrjttFCydXLIBJ826Eh6+e2P3VCd2EyvhR2Zch1Ews9bOgLaKrfANWqVe8N8oX31G2Od484YboVJAAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media (--tabletMinimum) {
+      min-width: 10px;
+      height: 7px;
+    }
+  }
+}
+
+.table th,
+td {
+  min-width: 206px;
+  border: 0;
+
+  @media (--tabletSmall) {
+    min-width: 150px;
+  }
+
+  @media (--tabletMinimum) {
+    min-width: 75px;
+  }
+}
+
+.table :is(th:first-child, td:first-child) {
+  padding-left: 44px;
+
+  @media (--tabletSmall) {
+    padding-left: 8px;
+  }
+}
+
+.table td {
+  padding-block: 14px;
+}
+
+.table td:last-child {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  justify-content: center;
+
+  @media (--tabletMinimum) {
+    gap: 6px;
+  }
+
+  &::before {
+    content: "";
+    min-width: 18px;
+    height: 22px;
+    display: inline-block;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAWCAYAAAAinad/AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGKSURBVHgBpZTBUcJAFIbf28XBm1CBeNRwSDrQCpQKjAedHLECoQLwBAyHEBrADqQDcsDxaErg6BDJ8+3G4Agi2fjPJJNssl+S770sQsG4M68GB6sKgLRBwnR02o9KuSfP75ogxCUf1oh406MyvZjQE+8buWEk5DFPigAwFBJCiglJUofPK+oB6h6EgnHnXpdx14zgt6KrwBpUC8HcF6/Fn/kgCF0CRiL4uDysCjCMO7+1FYi3ll/vBUAQqXFZjo+MYO6rV2N3EwZMx1a/rQdLKSyhD9sIxlV8ZhBgDDfZmGqJ7NigNVg4UQWX6Iycb4CK8uU73UWuAqgeIxQdVt0cnw0ed923F6aFo5wp4WtPRWBauPaEi8DqObAnfxaAEpxo4UtqQI7sLEDamGQjrVj4MIKiMC1cNSYLD6xhCDmz5Ux7SuCNPXWDeu8eDIJboK/GDKz+CRjmZwEI/FQ4XECBrJ1p4QTnJsJ/hfGv4mYrQVDPL3wzmAqnGS+lI1PhmxHwznvCEONyG/6ZT5Phsj+kSN2/AAAAAElFTkSuQmCC");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @media (--tabletMinimum) {
+      min-width: 8px;
+      height: 10px;
+    }
+  }
+}
+
+.table td:not(:first-child) {
+  text-align: center;
+}
+
+.table tr:nth-child(2n) {
+  background-color: var(--colorPersianIndigo);
+}
+
+.table tr:nth-child(2n) :is(td:first-child, td:last-child) {
+  color: var(--colorOrange);
+}
+
+.table thead tr th:last-child {
+  color: var(--colorPrimary);
+}
+
+.table tbody tr :is(td:first-child, td:last-child) {
+  color: var(--colorPrimary);
+}

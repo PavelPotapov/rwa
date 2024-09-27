@@ -1,0 +1,34 @@
+@import "./reset.pcss";
+@import "./fonts.pcss";
+@import "./variables.pcss";
+@import "./utils.pcss";
+@import "./mixins.pcss";
+@import "./animation.pcss";
+
+body {
+  font-family: var(--baseFontFamily);
+  font-size: 18px;
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+  min-height: 100dvh;
+  margin: 0;
+}
+
+[dir="rtl"] :is(h1, p) {
+  letter-spacing: 0;
+}
+
+h1 {
+  font-family: Unbounded, sans-serif;
+}
+
+p {
+  font-family: var(--baseFontFamily);
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+}
+
+ul {
+  list-style-type: disc;
+}

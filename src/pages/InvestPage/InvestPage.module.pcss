@@ -1,0 +1,143 @@
+@import "../../app/styles/custom-media.pcss";
+@import "../../app/styles/mixins.pcss";
+@import "../../app/styles/animation.pcss";
+
+.isSectionForSpoilerGroup {
+  --sectionPdHor: 31px;
+
+  padding-top: 61px;
+  padding-bottom: 0;
+
+  @media (--mobile) {
+    --sectionPdHor: 17px;
+
+    padding-top: 44px;
+    padding-bottom: 0;
+  }
+}
+
+.isSectionForIncomeNft {
+  padding-top: 233px;
+
+  @media (--tabletSmall) {
+    padding-top: 172px;
+  }
+
+  @media (--tabletMinimum) {
+    padding-top: 111px;
+  }
+
+  h2 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 64px;
+    text-transform: uppercase;
+    background: linear-gradient(143deg, #ffb72b 0%, #3dd0f1 46%, #3e8bff 100%);
+    background-size: 200% 200%;
+    animation: change-bg 5s ease infinite;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 87px;
+
+    @media (--tabletSmall) {
+      font-size: 42px;
+      margin-bottom: 56px;
+    }
+
+    @media (--tabletMinimum) {
+      font-size: 32px;
+      margin-bottom: 31px;
+    }
+  }
+}
+
+.isSectionHowToBuy {
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+    font-size: 64px;
+    text-transform: uppercase;
+    background: linear-gradient(143deg, #ffb72b 0%, #3dd0f1 46%, #3e8bff 100%);
+    background-size: 200% 200%;
+    animation: change-bg 5s ease infinite;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 87px;
+    margin-top: -60px;
+
+    @media (--tabletMedium) {
+      font-size: 40px;
+      margin-bottom: 56px;
+      text-align: right;
+      padding-right: 144px;
+    }
+
+    @media (--tabletSmall) {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 34px;
+      padding-right: 0;
+      margin-top: -360px;
+    }
+  }
+}
+
+.isOrangeCard {
+  --nftCardBg: linear-gradient(
+    116deg,
+    #eebf73 0%,
+    rgb(255 183 43 / 52%) 44.5%,
+    #191919 100%
+  );
+  --nftCardTextShadowTitle: 0 0 5px #f8e24a, 0 0 10px #f8e24a, 0 0 15px #f8e24a;
+}
+
+.isGreenCard {
+  --nftCardBg: linear-gradient(
+    116deg,
+    #3dd0f1 0%,
+    rgb(61 208 241 / 52%) 44.5%,
+    rgb(1 224 217 / 11%) 100%
+  );
+  --nftCardTextShadowTitle: 0 0 5px #3dd0f1, 0 0 10px #3dd0f1, 0 0 15px #3dd0f1;
+}
+
+.isSliderContainer {
+  @media (--tabletSmall) {
+    padding-inline: 25px;
+  }
+}
+
+.isBuyNftButton {
+  --btnBgColor: linear-gradient(270deg, #f8e24a 0%, #3dd0f1 100%) !important;
+  --btnTextShadow: "none" !important;
+  --btnHorPd: 60px !important;
+
+  border: none !important;
+  font-weight: 300 !important;
+  font-size: 20px !important;
+
+  @media (--tablet) {
+    --btnHorPd: 48px !important;
+  }
+
+  @media (--mobile) {
+    --btnHorPd: 71px !important;
+  }
+}
+
+.isSectionBuyCarInvest {
+  overflow-x: hidden;
+  padding-bottom: 110px;
+  padding-top: 170px;
+  margin-top: -170px;
+
+  @media (--tabletSmall) {
+    padding-bottom: 350px;
+  }
+}
+
+[dir="rtl"] .isSectionBuyCarInvest > * {
+  @mixin reset-rtl;
+}

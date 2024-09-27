@@ -1,0 +1,62 @@
+/* GlowingCircle.module.css */
+.circle {
+  --glowingCircleDelay: 0.3s;
+
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--circleColor);
+  box-shadow:
+    0 0 20px var(--circleColor),
+    0 0 40px var(--circleColor),
+    0 0 60px var(--circleColor);
+  animation: pulsev2 2s infinite; /* Добавление анимации */
+  animation-delay: var(--glowingCircleDelay);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulsev2 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow:
+      0 0 20px var(--circleColor),
+      0 0 40px var(--circleColor),
+      0 0 60px var(--circleColor);
+  }
+
+  50% {
+    transform: scale(2);
+    opacity: 1;
+    box-shadow:
+      0 0 30px var(--circleColor),
+      0 0 60px var(--circleColor),
+      0 0 90px var(--circleColor);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow:
+      0 0 20px var(--circleColor),
+      0 0 40px var(--circleColor),
+      0 0 60px var(--circleColor);
+  }
+}

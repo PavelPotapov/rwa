@@ -1,0 +1,122 @@
+/* stylelint-disable */
+@define-mixin fluidText $max: 100, $min: 14 {
+  font-size: calc($(min) px + ($max - $min) * ((100vw - 360px) / (1920 - 360)));
+
+  @media (--desktopAbove) {
+    font-size: $(max) px;
+  }
+}
+
+@define-mixin transition $prop: all 0.2s {
+  .isDomReady & {
+    transition: $prop;
+  }
+}
+
+@define-mixin hide {
+  opacity: 0;
+  visibility: hidden;
+  backface-visibility: hidden;
+}
+
+@define-mixin show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@define-mixin imgBlock {
+  display: block;
+  max-width: 100%;
+  border: 0;
+}
+
+@define-mixin imgCover {
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@define-mixin absCover {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+@define-mixin resetLink {
+  text-decoration: none;
+  border: 0;
+  color: inherit;
+}
+
+@define-mixin hideScrollbar {
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+
+@define-mixin resetList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0;
+    margin: 0;
+    position: static;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+@define-mixin resetBtn {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  box-shadow: none;
+  appearance: none;
+  text-align: left;
+}
+
+@define-mixin visuallyHidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+@define-mixin textOverflow {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@define-mixin lineClamp $max: 1 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $max;
+  overflow: hidden;
+}
+
+@define-mixin reset-rtl {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: normal;
+}
+
+/* stylelint-enable */

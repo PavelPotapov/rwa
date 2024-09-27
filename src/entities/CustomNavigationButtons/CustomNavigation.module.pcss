@@ -1,0 +1,52 @@
+@import "../../app/styles/custom-media.pcss";
+
+.btnNext,
+.btnPrev {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 2;
+
+  --btnBorderRadius: 100%;
+  --btnVerPd: 10px;
+  --btnHorPd: 10px;
+  --btnColor: var(--colorPrimary);
+  --btnIconColor: var(--colorPrimary);
+  --buttonIconBeforeWidth: 16px;
+  --buttonIconBeforeHeight: 16px;
+  --buttonIconAfterWidth: 16px;
+  --buttonIconAfterHeight: 16px;
+}
+
+.btnNext {
+  right: 0;
+  translate: calc(100% + 20px) 0%;
+
+  @media (--desktopMedium) {
+    translate: calc(100% - 17px) 0%;
+  }
+}
+
+.btnPrev {
+  translate: calc(-100% - 20px) 0%;
+
+  @media (--desktopMedium) {
+    translate: calc(-100% + 17px) 0%;
+  }
+
+  @media (--tabletSmall) {
+    translate: calc(-100% - 7px) 0%;
+  }
+}
+
+.customNavigationContainer {
+  color: inherit;
+}
+
+[dir="rtl"] .btnPrev {
+  left: 0;
+
+  @media (--tabletSmall) {
+    translate: calc(-50%) 0%;
+  }
+}

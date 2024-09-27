@@ -1,0 +1,50 @@
+.customSelect {
+  --customSelectWidth: 95px;
+
+  position: relative;
+  display: inline-block;
+}
+
+.selectHeader {
+  padding-block: 10px;
+  padding-inline: 16px;
+  background-color: #101010;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 19px;
+}
+
+.arrow {
+  transition: 0.3s ease;
+  color: var(--colorVividSkyBlue);
+}
+
+.up {
+  transform: rotate(180deg);
+}
+
+.selectOptions {
+  position: absolute;
+  top: calc(100% + 10px);
+  border-radius: 19px;
+  right: 0;
+  background: #101010;
+  z-index: 1;
+  overflow: hidden;
+  width: max-content;
+  min-width: var(--customSelectWidth);
+}
+
+.selectOption {
+  transition: background 0.2s ease;
+  padding-block: 10px;
+  padding-inline: 16px;
+  cursor: pointer;
+}
+
+.selectOption:hover {
+  background: #aca7a7;
+}
